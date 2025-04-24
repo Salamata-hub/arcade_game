@@ -56,6 +56,7 @@ class Game:
         """mise à jour des variables (30 fois par seconde)"""
 
         # deplacement du vaisseau
+    
         self.spaceship.update()
 
     # =====================================================

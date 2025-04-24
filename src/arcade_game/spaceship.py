@@ -52,13 +52,21 @@ class Spaceship :
     def update(self):
         """Mise à jour du vaisseau (30FPS)
         """
+        print("titi")
         self._move()
 
     def _move(self):
+        
         """déplacement avec les touches de directions"""
-        if pyxel.btn(pyxel.KEY_RIGHT):
-            self.x += 1
-
+        print("toto")
+        if pyxel.btn(pyxel.KEY_RIGHT) and self.x < self.jeu.w-self.w:
+            self.x += 2
+        if pyxel.btn(pyxel.KEY_UP) and self.y > 0 :
+             self.y -= 2
+        if pyxel.btn(pyxel.KEY_LEFT) and self.x > 0:
+             self.x -= 2
+        if pyxel.btn(pyxel.KEY_DOWN) and self.y < self.jeu.h-self.h:
+             self.y += 2 
     # =====================================================
     # == DRAW
     # =====================================================
